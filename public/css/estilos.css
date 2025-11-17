@@ -1,0 +1,261 @@
+/* ===================================
+   ESTILOS GENERALES
+   Aquí defino la base visual de toda la página: márgenes, comportamiento de los elementos y apariencia general.
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #81b4e7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* ===================================
+   CONTENEDOR PRINCIPAL
+   Ajusto el ancho máximo para que la página no se vea demasiado extendida en pantallas grandes y mantenga una buena estética.
+   =================================== */
+
+.container {
+    max-width: 900px;
+}
+
+/* ===================================
+   TARJETA PRINCIPAL
+   Aquí doy estilos a la card donde está el formulario.
+   =================================== */
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 700;
+    color: #0e28bb;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    text-align:center; /*CENTRAR TITULO*/
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* ===================================
+   FORMULARIOS 
+   Mejoro el aspecto de los inputs para que se vean más profesionales.
+   =================================== */
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* ===================================
+   BOTONES
+   Colores y animaciones para hacer los botones más elegantes y atractivos.
+   =================================== */
+
+.btn {
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   RESULTADO
+   Estilos para la tarjeta donde aparecerá el precio final una vez calculado el descuento.
+   =================================== */
+
+.tarjeta-resultado {
+    display: none;
+    animation: deslizar 0.4s ease-in-out;
+}
+
+.tarjeta-resultado.mostrar {
+    display: block;
+}
+
+@keyframes deslizar {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarjeta-resultado.borde-exito {
+    border-left: 5px solid #198754 !important;
+}
+
+#cuerpoResultado {
+    line-height: 1.8;
+}
+
+#cuerpoResultado li {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+#cuerpoResultado strong {
+    color: #0d6efd;
+}
+
+/* ===================================
+   ALERTAS
+   Estilos personalizados para mensajes de error o información.
+   =================================== */
+
+.alert {
+    border-radius: 6px;
+    border: none;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* ===================================
+   TEXTO MUTED
+   Pequeños textos aclaratorios con un color más suave.
+   =================================== */
+
+.text-muted {
+    color: #6c757d !important;
+    font-size: 0.95rem;
+}
+
+/* ===================================
+   ESPACIADO RESPONSIVE
+   Ajustes de padding y espaciado que complementan Bootstrap.
+   =================================== */
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.gap-2 {
+    gap: 0.5rem !important;
+}
+
+.g-3 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+}
+
+/* ===================================
+   MEDIA QUERIES - RESPONSIVE
+   Aquí ajusto tamaños y espacios para que la página se vea super bien en celulares y pantallas pequeñas.
+   =================================== */
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .form-label {
+        font-size: 0.95rem;
+    }
+
+    #resultBody li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    .row.gap-2 .btn {
+        margin-bottom: 0.5rem;
+    }
+}
