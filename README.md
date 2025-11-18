@@ -1,4 +1,4 @@
-Calculadora de Descuentos con Estructuras Condicionales
+*Calculadora de Descuentos con Estructuras Condicionales*
 
 Asignatura: Aplicaciones y Tecnologías Web
 NRC: 29314
@@ -16,21 +16,14 @@ Steven Sebastián Sandoval Casillas
 Katherine Gabriela Vargas Chirau
 
 Este proyecto consiste en una página web interactiva que calcula el precio final de un producto aplicando descuentos, según el tipo de cliente y la forma de pago seleccionada.
-La interfaz está desarrollada con HTML y Bootstrap 5, mientras que la lógica de cálculo está construida completamente en JavaScript, aplicando estructuras condicionales como:
+La interfaz está desarrollada con HTML y Bootstrap 5, mientras que la lógica de cálculo está construida completamente en JavaScript.
 
-if...else
-
-Operador ternario
-
-switch
-
-El objetivo principal es reforzar el uso de estas estructuras dentro de un entorno web real.
-
-Objetivo
+*Objetivo*
 
 Aplicar las estructuras condicionales if, el operador ternario y la sentencia switch en JavaScript dentro de una página web utilizando HTML y Bootstrap 5 para el diseño visual.
 
-Funcionalidades Principales
+*Funcionalidades Principales*
+
 Formulario que solicita:
 
 Nombre del producto
@@ -73,7 +66,8 @@ Forma de pago
 
 Mensaje motivacional
 
-Estructura del proyecto:
+*Estructura del proyecto:*
+
 public/
 │── css/
 │   └── estilos.css
@@ -89,7 +83,7 @@ public/
 └── calculadora_descuento.html
 └── README.md
 
-Cómo Ejecutar el Proyecto
+*Cómo Ejecutar el Proyecto*
 
 Descarga o clona este repositorio.
 
